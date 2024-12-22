@@ -1,0 +1,143 @@
+@InProceedings{pararegex,
+  author        = {Zhe Fu; Zhi Liu; Jun Li},
+  title         = {ParaRegex: Towards fast regular expression matching in parallel},
+  booktitle     = {Proceedings of the 2016 ACM/IEEE Symposium on Architectures for Networking
+and Communications Systems },
+  publisher     = "IEEE",
+  address       = "Santa Clara, CA, USA",
+  year          = {2016},
+  pages         = "113--114"
+}
+
+@InProceedings{enumeration,
+  author        = "Holub, Jan and {\v{S}}tekr, Stanislav",
+  editor        = "Maneth, Sebastian",
+  title         = "On Parallel Implementations of Deterministic Finite Automata",
+  booktitle     = "Implementation and Application of Automata",
+  year          = "2009",
+  publisher     = "Springer Berlin Heidelberg",
+  address       = "Berlin, Heidelberg",
+  pages         = "54--64",
+  abstract      = "We present implementations of parallel DFA run methods and find whether and under what conditions is worthy to use the parallel methods of simulation of run of finite automata.",
+  isbn          = "978-3-642-02979-0"
+}
+
+@online{DARPA,
+  title = {1999 DARPA Intrusion Detection Evaluation Dataset},
+  url = {https://www.ll.mit.edu/r-d/datasets/1999-darpa-intrusion-detection-evaluation-dataset},
+  lastaccessed = {Oct 16, 2024}
+}
+
+@online{snortRules,
+  title = {Snort-Rules},
+  year = 2018,
+  url = {https://github.com/thereisnotime/Snort-Rules},
+  lastaccessed = {Oct 16, 2024}
+}
+
+@article{PaREM,
+  author = {Memeti, Suejb and Pllana, Sabri},
+  year = {2014},
+  month = {12},
+  pages = {},
+  title = {PaREM: A Novel Approach for Parallel Regular Expression Matching},
+  doi = {10.1109/CSE.2014.146}
+}
+
+@inproceedings{Semi-Deterministic-Finite-Automata,
+  author = {Yang, Yi-Hua and Prasanna, V.},
+  year = {2011},
+  month = {05},
+  pages = {1853 - 1861},
+  title = {Space-time tradeoff in regular expression matching with semi-deterministic finite automa},
+  journal = {Proceedings - IEEE INFOCOM},
+  doi = {10.1109/INFCOM.2011.5934986}
+}
+
+@INPROCEEDINGS{Simultaneous-Finite-Automaton,
+  author={Sinya, Ryoma and Matsuzaki, Kiminori and Sassa, Masataka},
+  booktitle={2013 42nd International Conference on Parallel Processing}, 
+  title={Simultaneous Finite Automata: An Efficient Data-Parallel Model for Regular Expression Matching}, 
+  year={2013},
+  volume={},
+  number={},
+  pages={220-229},
+  keywords={Automata;Computational modeling;Parallel processing;Equations;Electronic mail;Program processors;Educational institutions;Automata;Data Parallel;Regular Expression;Syntactic Monoid},
+  doi={10.1109/ICPP.2013.31}
+}
+
+@inproceedings{BSP,
+  author = {Tachon, Thibaut},
+  year = {2019},
+  month = {07},
+  pages = {953-960},
+  title = {Parallel Matching of Regular Expressions with BSP Automata},
+  doi = {10.1109/HPCS48598.2019.9188181}
+}
+
+@article{NBVA,
+  author = {Le Glaunec, Alexis and Kong, Lingkun and Mamouras, Konstantinos},
+  title = {Regular Expression Matching using Bit Vector Automata},
+  year = {2023},
+  issue_date = {April 2023},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {7},
+  number = {OOPSLA1},
+  url = {https://doi.org/10.1145/3586044},
+  doi = {10.1145/3586044},
+  abstract = {Regular expressions (regexes) are ubiquitous in modern software. There is a variety of implementation techniques for regex matching, which can be roughly categorized as (1) relying on backtracking search, or (2) being based on finite-state automata. The implementations that use backtracking are often chosen due to their ability to support advanced pattern-matching constructs. Unfortunately, they are known to suffer from severe performance problems. For some regular expressions, the running time for matching can be exponential in the size of the input text. In order to provide stronger guarantees of matching efficiency, automata-based regex matching is the preferred choice. However, even these regex engines may exhibit severe performance degradation for some patterns. The main reason for this is that regexes used in practice are not exclusively built from the classical regular constructs, i.e., concatenation, nondeterministic choice and Kleene's star. They involve additional constructs that provide succinctness and convenience of expression. The most common such construct is bounded repetition (also called counting), which describes the repetition of the pattern a fixed number of times.  
+  In this paper, we propose a new algorithm for the efficient matching of regular expressions that involve bounded repetition. Our algorithms are based on a new model of automata, which we call nondeterministic bit vector automata (NBVA). This model is chosen to be expressively equivalent to nondeterministic counter automata with bounded counters, a very natural model for expressing patterns with bounded repetition. We show that there is a class of regular expressions with bounded repetition that can be matched in time that is independent from the repetition bounds. Our algorithms are general enough to cover the vast majority of challenging bounded repetitions that arise in practice. We provide an implementation of our approach in a regex engine, which we call BVA-Scan. We compare BVA-Scan against state-of-the-art regex engines on several real datasets.},
+  journal = {Proc. ACM Program. Lang.},
+  month = apr,
+  articleno = {92},
+  numpages = {30},
+  keywords = {regex, counter automata, bounded repetition, automata theory}
+}
+
+
+@article{HybridSA,
+  author = {Le Glaunec, Alexis and Kong, Lingkun and Mamouras, Konstantinos},
+  title = {HybridSA: GPU Acceleration of Multi-pattern Regex Matching using Bit Parallelism},
+  year = {2024},
+  issue_date = {October 2024},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {8},
+  number = {OOPSLA2},
+  url = {https://doi.org/10.1145/3689771},
+  doi = {10.1145/3689771},
+  abstract = {Multi-pattern matching is widely used in modern software for applications requiring high throughput such as protein search, network traffic inspection, virus or spam detection. Graphics Processor Units (GPUs) excel at executing massively parallel workloads. Regular expression (regex) matching is typically performed by simulating the execution of deterministic finite automata (DFAs) or nondeterministic finite automata (NFAs). The natural implementations of these automata simulation algorithms on GPUs are highly inefficient because they give rise to irregular memory access patterns.
+  This paper presents HybridSA, a heterogeneous CPU-GPU parallel engine for multi-pattern matching. HybridSA uses bit parallelism to efficiently simulate NFAs on GPUs, thus reducing the number of memory accesses and increasing the throughput. Our bit-parallel algorithms extend the classical shift-and algorithm for string matching to a large class of regular expressions and reduce automata simulation to a small number of bitwise operations. We have developed a compiler to translate regular expressions into bit masks, perform optimizations, and choose the best algorithms to run on the GPU. The majority of the regular expressions are accelerated on the GPU, while the patterns that exhibit random memory accesses are executed on the CPU in parallel. We evaluate HybridSA against state-of-the-art CPU and GPU engines, as well as a hybrid combination of the two. HybridSA achieves between 4 and 60 times higher throughput than the state-of-the-art CPU engine and between 4 and 233 times better than the state-of-the-art GPU engine across a collection of real-world benchmarks.},
+  journal = {Proc. ACM Program. Lang.},
+  month = oct,
+  articleno = {331},
+  numpages = {30},
+  keywords = {CUDA, bit parallelism, regex matching, regular expressions, shift-and algorithm}
+}
+
+@ARTICLE{semi,
+  author={Dlugosch, Paul and Brown, Dave and Glendenning, Paul and Leventhal, Michael and Noyes, Harold},
+  journal={IEEE Transactions on Parallel and Distributed Systems}, 
+  title={An Efficient and Scalable Semiconductor Architecture for Parallel Automata Processing}, 
+  year={2014},
+  volume={25},
+  number={12},
+  pages={3088-3098},
+  keywords={Automata;Routing;Radiation detectors;Arrays;Hardware;Complexity theory;Automata;parallel architectures;high performance computing;hardware;accelerator architectures;reconfigurable architectures},
+  doi={10.1109/TPDS.2014.8}
+}
+
+@Article{FPGA,
+  AUTHOR = {Zhang, Chuang and Tang, Xuebin and Peng, Yuanxi},
+  TITLE = {Enhancing Regular Expression Processing through Field-Programmable Gate Array-Based Multi-Character Non-Deterministic Finite Automata},
+  JOURNAL = {Electronics},
+  VOLUME = {13},
+  YEAR = {2024},
+  NUMBER = {9},
+  ARTICLE-NUMBER = {1635},
+  URL = {https://www.mdpi.com/2079-9292/13/9/1635},
+  ISSN = {2079-9292},
+  ABSTRACT = {This work investigates the advantages of FPGA-based Multi-Character Non-Deterministic Finite Automata (MC-NFA) for enhancing regular expression processing over traditional software-based methods. By integrating Field-Programmable Gate Arrays (FPGAs) within a data processing framework, our study showcases significant improvements in processing efficiency, accuracy, and resource utilization for complex pattern matching tasks. We present a novel approach that not only accelerates database and network security applications, but also contributes to the evolving landscape of computational efficiency and hardware acceleration. The findings illustrate that FPGA’s coherent access to main memory and the efficient use of resources lead to considerable gains in processing times and throughput for handling regular expressions, unaffected by expression complexity and driven primarily by dataset size and match location. Our research further introduces a phase shift compensation technique that elevates match accuracy to optimal levels, highlighting FPGA’s potential for real-time, accurate data processing. The study confirms that the benefits of using FPGA for these tasks do not linearly correlate with an increase in resource consumption, underscoring the technology’s efficiency. This paper not only solidifies the case for adopting FPGA technology in complex data processing tasks, but also lays the groundwork for future explorations into optimizing hardware accelerators for broader applications.},
+  DOI = {10.3390/electronics13091635}
+}
